@@ -1,0 +1,8 @@
+# Fichiers Excel (données personnelles — choisis via l’app)
+*.xlsx
+~$*
+
+# OS / éditeurs
+.DS_Store
+Thumbs.db
+*.tmp

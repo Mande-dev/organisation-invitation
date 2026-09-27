@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recherche — Organisation Invitation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js"></script>
+</head>
+<body>
+  <div class="bg" aria-hidden="true"></div>
+
+  <main class="app">
+    <header class="header">
+      <p class="brand">Organisation Invitation</p>
+      <h1>Recherche de noms</h1>
+      <p class="subtitle">Fichier Excel mémorisé jusqu’à ce que vous le changiez</p>
+    </header>
+
+    <section class="search-panel" aria-label="Recherche">
+      <div class="file-row">
+        <label class="file-btn" for="file-input" id="file-btn-label">Choisir le fichier Excel</label>
+        <input id="file-input" type="file" accept=".xlsx,.xls" />
+        <span id="file-name" class="file-name"></span>
+      </div>
+
+      <label class="search-label" for="search-input">Nom à rechercher</label>
+      <div class="search-row">
+        <input
+          id="search-input"
+          type="search"
+          placeholder="Ex. Joyce, Couple Jean…"
+          autocomplete="off"
+          disabled
+        />
+        <button id="search-btn" type="button" disabled>Rechercher</button>
+      </div>
+      <p id="status" class="status" role="status" aria-live="polite">
+        Choisissez le fichier Excel pour commencer.
+      </p>
+    </section>
+
+    <section id="results" class="results" aria-live="polite"></section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
